@@ -1,0 +1,2588 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT SITUNEO DIGITAL - Layanan Digital Terlengkap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #3a86ff;
+            --secondary-color: #ff006e;
+            --accent-color: #ffbe0b;
+            --dark-color: #212529;
+            --light-color: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://picsum.photos/seed/digital/1920/600.jpg') center/cover;
+            opacity: 0.2;
+            z-index: -1;
+        }
+        
+        .section-title {
+            font-weight: 700;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--accent-color);
+        }
+        
+        .division-card {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-bottom: 30px;
+            height: 100%;
+        }
+        
+        .division-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .division-header {
+            padding: 20px;
+            color: white;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        
+        .division-1 { background: linear-gradient(135deg, #4e54c8, #8f94fb); }
+        .division-2 { background: linear-gradient(135deg, #f093fb, #f5576c); }
+        .division-3 { background: linear-gradient(135deg, #4facfe, #00f2fe); }
+        .division-4 { background: linear-gradient(135deg, #43e97b, #38f9d7); }
+        .division-5 { background: linear-gradient(135deg, #fa709a, #fee140); }
+        .division-6 { background: linear-gradient(135deg, #30cfd0, #330867); }
+        .division-7 { background: linear-gradient(135deg, #a8edea, #fed6e3); }
+        .division-8 { background: linear-gradient(135deg, #ff9a9e, #fecfef); }
+        .division-9 { background: linear-gradient(135deg, #ffecd2, #fcb69f); }
+        .division-10 { background: linear-gradient(135deg, #a1c4fd, #c2e9fb); }
+        
+        .division-body {
+            padding: 25px;
+        }
+        
+        .service-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        
+        .service-table th, .service-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .service-table th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+        }
+        
+        .service-table tr:hover {
+            background-color: #f8f9fa;
+        }
+        
+        .price-tag {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .package-card {
+            border: 1px solid #eee;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
+        
+        .package-card:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+        
+        .package-title {
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .feature-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .feature-list li i {
+            color: var(--accent-color);
+            margin-right: 10px;
+        }
+        
+        .promo-section {
+            background-color: #f8f9fa;
+            padding: 60px 0;
+            margin-top: 60px;
+        }
+        
+        .promo-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .promo-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        .contact-btn {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s;
+            display: inline-block;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+        
+        .contact-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            color: white;
+        }
+        
+        .footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+        
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin-right: 15px;
+            transition: color 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color: var(--accent-color);
+        }
+        
+        .copyright {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            text-align: center;
+            color: #aaa;
+        }
+        
+        .accordion-button:not(.collapsed) {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .accordion-button:focus {
+            box-shadow: none;
+            border-color: var(--primary-color);
+        }
+        
+        .nav-pills .nav-link.active {
+            background-color: var(--primary-color);
+        }
+        
+        .nav-pills .nav-link {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .tab-content {
+            padding: 20px;
+            border: 1px solid #dee2e6;
+            border-radius: 0 0 0.375rem 0.375rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 50px 0;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .division-header {
+                font-size: 1.2rem;
+            }
+            
+            .promo-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">PT SITUNEO DIGITAL</h1>
+            <p class="lead mb-5">Solusi Digital Terpadu untuk Mengembangkan Bisnis Anda</p>
+            <a href="#services" class="contact-btn">Jelajahi Layanan Kami</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Layanan Kami</h2>
+            
+            <!-- Division 1: Website & System Development -->
+            <div class="row mb-5">
+                <div class="col-lg-12">
+                    <div class="division-card">
+                        <div class="division-header division-1">
+                            <i class="fas fa-code me-2"></i> Divisi 1: Website & Pengembangan Sistem
+                        </div>
+                        <div class="division-body">
+                            <p class="mb-4">Fokus utama: membangun landasan bisnis digital — website, toko online, sistem custom, dashboard admin/klien, gateway pembayaran, dan keamanan website.</p>
+                            
+                            <!-- Tabs for Division 1 -->
+                            <ul class="nav nav-pills mb-3" id="division1-tabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="div1-jenis-tab" data-bs-toggle="pill" data-bs-target="#div1-jenis" type="button" role="tab" aria-controls="div1-jenis" aria-selected="true">Jenis Website</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="div1-fitur-tab" data-bs-toggle="pill" data-bs-target="#div1-fitur" type="button" role="tab" aria-controls="div1-fitur" aria-selected="false">Fitur Standar</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="div1-addon-tab" data-bs-toggle="pill" data-bs-target="#div1-addon" type="button" role="tab" aria-controls="div1-addon" aria-selected="false">Fitur Add-On</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="div1-paket-tab" data-bs-toggle="pill" data-bs-target="#div1-paket" type="button" role="tab" aria-controls="div1-paket" aria-selected="false">Paket Kombinasi</button>
+                                </li>
+                            </ul>
+                            
+                            <div class="tab-content" id="division1-tabContent">
+                                <!-- Jenis Website Tab -->
+                                <div class="tab-pane fade show active" id="div1-jenis" role="tabpanel" aria-labelledby="div1-jenis-tab">
+                                    <div class="table-responsive">
+                                        <table class="service-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Jenis Website</th>
+                                                    <th>Deskripsi Singkat</th>
+                                                    <th>Harga Pembuatan Sekali</th>
+                                                    <th>Harga Sewa / Bulanan</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Halaman Arahan / Profil Perusahaan</td>
+                                                    <td>Situs web 1 halaman untuk promosi merek, jasa, atau bisnis lokal.</td>
+                                                    <td class="price-tag">Rp 350.000</td>
+                                                    <td class="price-tag">Rp 150.000/bulan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Situs Web Multi Halaman (Profesional)</td>
+                                                    <td>4–6 halaman (Beranda, Tentang, Layanan, Galeri, Blog, Kontak) + dasar SEO.</td>
+                                                    <td class="price-tag">Rp 750.000</td>
+                                                    <td class="price-tag">Rp 250.000/bulan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Situs Web Toko Online (E-Commerce)</td>
+                                                    <td>Katalog produk, sistem belanja, gateway pembayaran, dan laporan transaksi.</td>
+                                                    <td class="price-tag">Rp 1.500.000</td>
+                                                    <td class="price-tag">Rp 350.000/bulan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Website Custom / Sistem Web App</td>
+                                                    <td>Fitur sesuai kebutuhan (CRM, ERP, POS, HRIS, portal client, sistem pemesanan).</td>
+                                                    <td class="price-tag">Mulai Rp 2.000.000</td>
+                                                    <td class="price-tag">Rp 500.000–1.000.000/bulan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Website Sekolah / Lembaga / Yayasan</td>
+                                                    <td>Profil lembaga, berita, data guru/siswa, sistem nilai & pengumuman.</td>
+                                                    <td class="price-tag">Rp 1.200.000</td>
+                                                    <td class="price-tag">Rp 400.000/bulan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Portofolio Situs Web / Personal Branding</td>
+                                                    <td>Desain modern untuk influencer, desainer, fotografer, konsultan, dll.</td>
+                                                    <td class="price-tag">Rp 700.000</td>
+                                                    <td class="price-tag">Rp 200.000/bulan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Website AI & Otomasi Bisnis</td>
+                                                    <td>Situs web cerdas dengan chatbot AI, CRM, & analitik dasbor.</td>
+                                                    <td class="price-tag">Rp 2.500.000</td>
+                                                    <td class="price-tag">Rp 450.000/bulan</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <!-- Fitur Standar Tab -->
+                                <div class="tab-pane fade" id="div1-fitur" role="tabpanel" aria-labelledby="div1-fitur-tab">
+                                    <h4 class="mb-3">Fitur Standar Semua Website</h4>
+                                    <p>Semua website yang dibuat sudah termasuk:</p>
+                                    <ul class="feature-list">
+                                        <li><i class="fas fa-check-circle"></i> Desain responsif (mobile & desktop)</li>
+                                        <li><i class="fas fa-check-circle"></i> SEO dasar (Google-index ready)</li>
+                                        <li><i class="fas fa-check-circle"></i> SSL (https) & keamanan website</li>
+                                        <li><i class="fas fa-check-circle"></i> Manajemen domain + hosting</li>
+                                        <li><i class="fas fa-check-circle"></i> Google Maps + kontak WhatsApp</li>
+                                        <li><i class="fas fa-check-circle"></i> Email bisnis (nama@domain.com)</li>
+                                        <li><i class="fas fa-check-circle"></i> Integrasi media sosial</li>
+                                        <li><i class="fas fa-check-circle"></i> Pemeliharaan & dukungan</li>
+                                    </ul>
+                                </div>
+                                
+                                <!-- Fitur Add-On Tab -->
+                                <div class="tab-pane fade" id="div1-addon" role="tabpanel" aria-labelledby="div1-addon-tab">
+                                    <h4 class="mb-3">Fitur Add-On & Opsional (Custom Tambahan)</h4>
+                                    <div class="table-responsive">
+                                        <table class="service-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Add-On</th>
+                                                    <th>Deskripsi</th>
+                                                    <th>Harga</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>⚡ Optimasi Kecepatan Website</td>
+                                                    <td>Meningkatkan kinerja (GTMetrix A+ / PageSpeed 90+).</td>
+                                                    <td class="price-tag">Rp 200.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🔒 Tambahan Pengaturan SSL & Keamanan</td>
+                                                    <td>Firewall, anti-hack, proteksi malware, backup harian.</td>
+                                                    <td class="price-tag">Rp 150.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🥇 Spesialis SEO (Premium)</td>
+                                                    <td>Riset kata kunci, SEO on-page/off-page, backlink, laporan bulanan.</td>
+                                                    <td class="price-tag">Rp 600.000/bulan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>📍 Google My Business (Titik Maps)</td>
+                                                    <td>Pengaturan lokasi bisnis di Google Maps + optimasi lokal.</td>
+                                                    <td class="price-tag">Rp 250.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>💳 Gerbang Pembayaran Integrasi</td>
+                                                    <td>Midtrans, Xendit, DOKU, Tripay, dll.</td>
+                                                    <td class="price-tag">Rp 250.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>💬 Chatbot WhatsApp / Chatbot AI</td>
+                                                    <td>Balasan otomatis pelanggan 24 jam melalui WhatsApp / website.</td>
+                                                    <td class="price-tag">Rp 200.000/bulan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>📊 Dasbor Admin / Klien / Penjualan</td>
+                                                    <td>Sistem login multi-user & pemantauan data.</td>
+                                                    <td class="price-tag">Rp 500.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🧠 Sistem CRM (Pelanggan Kelola)</td>
+                                                    <td>Manajemen pelanggan, prospek, tindak lanjut otomatis.</td>
+                                                    <td class="price-tag">Rp 400.000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <!-- Paket Kombinasi Tab -->
+                                <div class="tab-pane fade" id="div1-paket" role="tabpanel" aria-labelledby="div1-paket-tab">
+                                    <h4 class="mb-3">Paket Kombinasi (Hemat)</h4>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">🌱 Startup Go Digital</div>
+                                                <p>Situs Web Dasar + Domain + SEO Dasar + Tautan WhatsApp</p>
+                                                <div class="price-tag fs-4">Rp 200.000/bulan</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">🚀 Bisnis Naik Level</div>
+                                                <p>Situs Web Pro + SEO + Penulisan Naskah + Iklan Meta + Laporan</p>
+                                                <div class="price-tag fs-4">Rp 400.000/bulan</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">Sistem AI Digital</div>
+                                                <p>Situs Web Kustom + CRM + Chatbot AI + Laporan Pemasaran</p>
+                                                <div class="price-tag fs-4">Rp 600.000/bulan</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">Pertumbuhan E-Commerce</div>
+                                                <p>Toko Online + Payment Gateway + Iklan + Maintenance</p>
+                                                <div class="price-tag fs-4">Rp 500.000/bulan</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-4">
+                                <h5>Keunggulan Divisi Website SITUNEO DIGITAL</h5>
+                                <ul class="feature-list">
+                                    <li><i class="fas fa-check-circle"></i> Harga fleksibel (beli atau sewa)</li>
+                                    <li><i class="fas fa-check-circle"></i> Bisa upgrade kapan saja</li>
+                                    <li><i class="fas fa-check-circle"></i> Gratis perawatan untuk paket sewa</li>
+                                    <li><i class="fas fa-check-circle"></i> Dukungan 24 jam via WhatsApp</li>
+                                    <li><i class="fas fa-check-circle"></i> Desain premium & ramah pengguna</li>
+                                    <li><i class="fas fa-check-circle"></i> Terintegrasi dengan AI, CRM, dan alat pemasaran</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Division 2: Digital Marketing & Traffic Growth -->
+            <div class="row mb-5">
+                <div class="col-lg-12">
+                    <div class="division-card">
+                        <div class="division-header division-2">
+                            <i class="fas fa-chart-line me-2"></i> Divisi 2: Digital Marketing & Traffic Growth
+                        </div>
+                        <div class="division-body">
+                            <p class="mb-4">Fokus: Mengoptimalkan visibilitas bisnis, mendatangkan pengunjung, dan meningkatkan konversi penjualan secara digital.</p>
+                            
+                            <!-- Tabs for Division 2 -->
+                            <ul class="nav nav-pills mb-3" id="division2-tabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="div2-utama-tab" data-bs-toggle="pill" data-bs-target="#div2-utama" type="button" role="tab" aria-controls="div2-utama" aria-selected="true">Layanan Utama</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="div2-strategi-tab" data-bs-toggle="pill" data-bs-target="#div2-strategi" type="button" role="tab" aria-controls="div2-strategi" aria-selected="false">Strategi & Optimasi</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="div2-paket-tab" data-bs-toggle="pill" data-bs-target="#div2-paket" type="button" role="tab" aria-controls="div2-paket" aria-selected="false">Paket Iklan</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="div2-konten-tab" data-bs-toggle="pill" data-bs-target="#div2-konten" type="button" role="tab" aria-controls="div2-konten" aria-selected="false">Layanan Konten</button>
+                                </li>
+                            </ul>
+                            
+                            <div class="tab-content" id="division2-tabContent">
+                                <!-- Layanan Utama Tab -->
+                                <div class="tab-pane fade show active" id="div2-utama" role="tabpanel" aria-labelledby="div2-utama-tab">
+                                    <div class="table-responsive">
+                                        <table class="service-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Layanan</th>
+                                                    <th>Deskripsi</th>
+                                                    <th>Harga</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Optimasi SEO (Search Engine Optimization)</td>
+                                                    <td>Meningkatkan peringkat website di Google agar mudah menemukan potensi pelanggan.</td>
+                                                    <td class="price-tag">Dasar: Rp 200.000/bln<br>Premium: Rp 600.000/bln</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Manajemen Iklan Google</td>
+                                                    <td>Iklan pencarian (Search Ads), display, dan pemasaran ulang di Google. Termasuk setup & laporan hasil.</td>
+                                                    <td class="price-tag">Mulai Rp 400.000/bln</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🎯 Meta Ads (Iklan Facebook & Instagram)</td>
+                                                    <td>Menyiapkan kampanye iklan, menargetkan audiens, desain visual, optimasi, dan laporan kinerja.</td>
+                                                    <td class="price-tag">Rp 400.000/bulan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Manajemen Iklan TikTok</td>
+                                                    <td>Pengelolaan iklan TikTok dari strategi konten hingga laporan konversi.</td>
+                                                    <td class="price-tag">Rp 400.000/bulan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🌍 Google My Business (Titik Maps)</td>
+                                                    <td>Siapkan lokasi bisnis di Google Maps + optimasi kata kunci lokal & ulasan pelanggan.</td>
+                                                    <td class="price-tag">Rp 250.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>💬 Ledakan WhatsApp (Kirim Massal)</td>
+                                                    <td>Sistem siaran pesan promosi ke ribuan nomor pelanggan.</td>
+                                                    <td class="price-tag">Rp 250.000/bulan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Otomatisasi Pemasaran Email</td>
+                                                    <td>Kirim email promo otomatis ke pelanggan baru & lama dengan segmentasi data.</td>
+                                                    <td class="price-tag">Rp 200.000/bulan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🧩 Kampanye Penargetan Ulang & Pemasaran Ulang</td>
+                                                    <td>Iklan cerdas untuk audiens yang pernah berinteraksi dengan brand kamu.</td>
+                                                    <td class="price-tag">Rp 300.000/bulan</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <!-- Strategi & Optimasi Tab -->
+                                <div class="tab-pane fade" id="div2-strategi" role="tabpanel" aria-labelledby="div2-strategi-tab">
+                                    <h4 class="mb-3">Strategi & Optimasi Lalu Lintas</h4>
+                                    <div class="table-responsive">
+                                        <table class="service-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Jenis Optimasi</th>
+                                                    <th>Deskripsi</th>
+                                                    <th>Harga</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>📈 Rencana Pertumbuhan Lalu Lintas (Organik + Berbayar)</td>
+                                                    <td>Kombinasi SEO, iklan, & konten sosial untuk mempercepat kenaikan pengunjung.</td>
+                                                    <td class="price-tag">Rp 500.000/bulan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>💡 Riset Kata Kunci & Pesaing</td>
+                                                    <td>Analisis pesaing & kata kunci terbaik untuk bisnis kamu.</td>
+                                                    <td class="price-tag">Rp 200.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Penargetan Audiens AI</td>
+                                                    <td>Segmentasi audiens berbasis AI untuk kampanye digital.</td>
+                                                    <td class="price-tag">Rp 300.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>📅 Perencanaan Kampanye (3 Bulan)</td>
+                                                    <td>Rencana strategi digital lengkap untuk 3 bulan ke depan.</td>
+                                                    <td class="price-tag">Rp 400.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>📢 Kampanye Kesadaran Merek</td>
+                                                    <td>Kampanye digital untuk membangun popularitas dan kepercayaan brand.</td>
+                                                    <td class="price-tag">Rp 500.000/bulan</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <!-- Paket Iklan Tab -->
+                                <div class="tab-pane fade" id="div2-paket" role="tabpanel" aria-labelledby="div2-paket-tab">
+                                    <h4 class="mb-3">Paket Iklan & Promosi Kombinasi</h4>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">Paket Iklan Pemula</div>
+                                                <p>Meta Ads (FB & IG) + Penulisan Naskah + Laporan</p>
+                                                <div class="price-tag fs-4">Rp 400.000/bulan</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">Paket Iklan Pertumbuhan</div>
+                                                <p>Meta Ads + Google Ads + SEO Dasar + Laporan Bulanan</p>
+                                                <div class="price-tag fs-4">Rp 750.000/bulan</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">Paket Pemasaran Cerdas AI</div>
+                                                <p>Iklan Meta + Iklan TikTok + Penargetan Ulang + WhatsApp Blast + Integrasi CRM</p>
+                                                <div class="price-tag fs-4">Rp 1.000.000/bulan</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">Paket Bisnis Lokal</div>
+                                                <p>Google Bisnisku + SEO Lokal + Tautan WhatsApp</p>
+                                                <div class="price-tag fs-4">Rp 300.000/bulan</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">🏪 Penguat Lalu Lintas E-Commerce</div>
+                                                <p>Produk SEO + Iklan TikTok + Iklan Belanja Google</p>
+                                                <div class="price-tag fs-4">Rp 800.000/bulan</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Layanan Konten Tab -->
+                                <div class="tab-pane fade" id="div2-konten" role="tabpanel" aria-labelledby="div2-konten-tab">
+                                    <h4 class="mb-3">Layanan Konten & Dukungan Merek</h4>
+                                    <p>(Dikerjakan bersama Divisi Konten & Desain Kreatif)</p>
+                                    <div class="table-responsive">
+                                        <table class="service-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Layanan</th>
+                                                    <th>Deskripsi</th>
+                                                    <th>Harga</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>🖋️ Halaman Arahan Penulisan Naskah</td>
+                                                    <td>Teks promosi lengkap untuk website / halaman penjualan.</td>
+                                                    <td class="price-tag">Rp 150.000/halaman</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Paket Pembuat Konten</td>
+                                                    <td>Foto produk, video reels, caption, dan konten strategi.</td>
+                                                    <td class="price-tag">Rp 500.000 – 1.000.000/bulan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Manajemen Media Sosial</td>
+                                                    <td>Kelola akun Instagram, Facebook, jadwal konten, & interaksi.</td>
+                                                    <td class="price-tag">Rp 400.000/bulan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>📅 Perencana Konten (Bulanan)</td>
+                                                    <td>Kalender konten & ide kreatif 30 hari ke depan.</td>
+                                                    <td class="price-tag">Rp 200.000/bulan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🎨 Iklan Banner & Desain Promosi</td>
+                                                    <td>Desain feed, story, carousel, & banner iklan profesional.</td>
+                                                    <td class="price-tag">Rp 100.000–300.000 per set</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-4">
+                                <h5>Keunggulan Divisi Digital Marketing SITUNEO</h5>
+                                <ul class="feature-list">
+                                    <li><i class="fas fa-check-circle"></i> Tim profesional berpengalaman multi-platform</li>
+                                    <li><i class="fas fa-check-circle"></i> Laporan kinerja bulanan lengkap & transparan</li>
+                                    <li><i class="fas fa-check-circle"></i> Kombinasi strategi organik + iklan berbayar</li>
+                                    <li><i class="fas fa-check-circle"></i> Dukungan data & AI untuk penargetan optimal</li>
+                                    <li><i class="fas fa-check-circle"></i> Dapat dikombinasikan dengan layanan website & CRM</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Division 3: Automation & AI System -->
+            <div class="row mb-5">
+                <div class="col-lg-12">
+                    <div class="division-card">
+                        <div class="division-header division-3">
+                            <i class="fas fa-robot me-2"></i> Divisi 3: Otomasi & Sistem AI
+                        </div>
+                        <div class="division-body">
+                            <p class="mb-4">Fokus: Membangun sistem kerja otomatis berbasis AI untuk efisiensi, kecepatan, dan keuntungan tanpa harus bergantung pada tenaga manusia 100%.</p>
+                            
+                            <!-- Tabs for Division 3 -->
+                            <ul class="nav nav-pills mb-3" id="division3-tabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="div3-utama-tab" data-bs-toggle="pill" data-bs-target="#div3-utama" type="button" role="tab" aria-controls="div3-utama" aria-selected="true">Layanan Utama</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="div3-addon-tab" data-bs-toggle="pill" data-bs-target="#div3-addon" type="button" role="tab" aria-controls="div3-addon" aria-selected="false">Fitur Add-On</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="div3-paket-tab" data-bs-toggle="pill" data-bs-target="#div3-paket" type="button" role="tab" aria-controls="div3-paket" aria-selected="false">Paket Kombinasi</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="div3-teknologi-tab" data-bs-toggle="pill" data-bs-target="#div3-teknologi" type="button" role="tab" aria-controls="div3-teknologi" aria-selected="false">Teknologi</button>
+                                </li>
+                            </ul>
+                            
+                            <div class="tab-content" id="division3-tabContent">
+                                <!-- Layanan Utama Tab -->
+                                <div class="tab-pane fade show active" id="div3-utama" role="tabpanel" aria-labelledby="div3-utama-tab">
+                                    <div class="table-responsive">
+                                        <table class="service-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Layanan</th>
+                                                    <th>Deskripsi</th>
+                                                    <th>Harga</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Chatbot AI (WhatsApp / Situs Web / Instagram)</td>
+                                                    <td>Chatbot pintar yang bisa menjawab pertanyaan pelanggan secara otomatis, kirim promo, dan tindak lanjut pesanan.</td>
+                                                    <td class="price-tag">Basic: Rp 300.000/bln<br>Premium: Rp 600.000/bln</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Sistem CRM (Manajemen Hubungan Pelanggan)</td>
+                                                    <td>Sistem pengelolaan pelanggan: data, riwayat pesanan, tindak lanjut otomatis, pengingat, dan laporan kinerja penjualan.</td>
+                                                    <td class="price-tag">Basic: Rp 500.000<br>Custom: Rp 1.000.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>📤 WhatsApp Blast (Kirim Massal Otomatis)</td>
+                                                    <td>Kirim ribuan pesan promosi atau notifikasi ke pelanggan dengan nama pribadi (personalized).</td>
+                                                    <td class="price-tag">Rp 250.000/bulan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Sistem Otomatisasi Email</td>
+                                                    <td>Kirim email promosi, ucapan ulang tahun, atau notifikasi transaksi otomatis.</td>
+                                                    <td class="price-tag">Rp 200.000/bulan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Dasbor Bisnis AI</td>
+                                                    <td>Dashboard pintar yang menampilkan data penjualan, trafik, lead, & kinerja pemasaran secara real-time.</td>
+                                                    <td class="price-tag">Rp 500.000 – 1.000.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🤝 Integrasi Situs Web + CRM + Chatbot</td>
+                                                    <td>Sistem koneksi agar pelanggan dari website langsung masuk CRM & dijawab otomatis oleh chatbot.</td>
+                                                    <td class="price-tag">Rp 800.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Sistem Tindak Lanjut Otomatis (Lead Nurturing)</td>
+                                                    <td>Sistem otomatis yang menghubungi prospek yang belum transaksi (via WA/Email).</td>
+                                                    <td class="price-tag">Rp 300.000/bulan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>📅 Otomatisasi Pemesanan / Janji Temu</td>
+                                                    <td>Sistem jadwal otomatis untuk reservasi, konsultasi, atau pemesanan layanan.</td>
+                                                    <td class="price-tag">Rp 250.000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <!-- Fitur Add-On Tab -->
+                                <div class="tab-pane fade" id="div3-addon" role="tabpanel" aria-labelledby="div3-addon-tab">
+                                    <h4 class="mb-3">Fitur Tambahan & Custom Add-On</h4>
+                                    <div class="table-responsive">
+                                        <table class="service-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Add-On</th>
+                                                    <th>Deskripsi</th>
+                                                    <th>Harga</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>🧠 Pelatihan Asisten AI (Khusus Chatbot)</td>
+                                                    <td>Kustomisasi chatbot agar bicara sesuai gaya merek & produk kamu.</td>
+                                                    <td class="price-tag">Rp 250.000 (sekali setup)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🔌 Integrasi API (Google Sheet, Website, Meta, WooCommerce, dll)</td>
+                                                    <td>Menghubungkan sistem bisnis kamu ke berbagai platform.</td>
+                                                    <td class="price-tag">Rp 300.000–800.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Peramalan Penjualan AI</td>
+                                                    <td>Prediksi penjualan & perilaku pelanggan berbasis data AI.</td>
+                                                    <td class="price-tag">Rp 500.000/bulan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🪄 Distribusi Prospek Otomatis</td>
+                                                    <td>Sistem pembagian otomatis mengarah ke tim penjualan.</td>
+                                                    <td class="price-tag">Rp 250.000/bulan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>💼 Dasbor Obrolan Multi-Agen</td>
+                                                    <td>Tampilan chat untuk tim support agar dapat menangani banyak pelanggan secara bersamaan.</td>
+                                                    <td class="price-tag">Rp 300.000/bulan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🔒 Keamanan & Otomatisasi Pencadangan Data</td>
+                                                    <td>Pencadangan otomatis harian/mingguan ke cloud + enkripsi data pelanggan.</td>
+                                                    <td class="price-tag">Rp 200.000/bulan</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <!-- Paket Kombinasi Tab -->
+                                <div class="tab-pane fade" id="div3-paket" role="tabpanel" aria-labelledby="div3-paket-tab">
+                                    <h4 class="mb-3">Paket Kombinasi</h4>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">Paket Pemula Otomatisasi</div>
+                                                <p>Chatbot AI + WhatsApp Blast + CRM Dasar</p>
+                                                <div class="price-tag fs-4">Rp 700.000/bulan</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">Paket Bisnis Cerdas AI</div>
+                                                <p>CRM + Chatbot Premium + Dasbor Analitik</p>
+                                                <div class="price-tag fs-4">Rp 1.200.000/bulan</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">💼 Paket Pendorong Penjualan</div>
+                                                <p>Tindak Lanjut Otomatis + CRM + Pengingat Pembayaran</p>
+                                                <div class="price-tag fs-4">Rp 900.000/bulan</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">Paket Otomatisasi E-Commerce</div>
+                                                <p>Produk Chatbot + Integrasi Website + Faktur Otomatis</p>
+                                                <div class="price-tag fs-4">Rp 1.000.000/bulan</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">Paket Otomasi Perusahaan</div>
+                                                <p>AI Lengkap + CRM + Dasbor + API + Cadangan Keamanan</p>
+                                                <div class="price-tag fs-4">Rp 2.000.000/bulan</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Teknologi Tab -->
+                                <div class="tab-pane fade" id="div3-teknologi" role="tabpanel" aria-labelledby="div3-teknologi-tab">
+                                    <h4 class="mb-3">Sistem & Teknologi yang Digunakan</h4>
+                                    <ul class="feature-list">
+                                        <li><i class="fas fa-check-circle"></i> Chatbot AI (OpenAI, Dialogflow, WhatsApp API)</li>
+                                        <li><i class="fas fa-check-circle"></i> CRM (Zoho, HubSpot, atau custom by SITUNEO)</li>
+                                        <li><i class="fas fa-check-circle"></i> Automation Tool (Make, Pabbly, Zapier Integration)</li>
+                                        <li><i class="fas fa-check-circle"></i> Cloud Dashboard (Google Data Studio / Power BI)</li>
+                                        <li><i class="fas fa-check-circle"></i> Custom Backend (Laravel / Node.js)</li>
+                                        <li><i class="fas fa-check-circle"></i> AI Model untuk Analisis Pelanggan & Prediksi</li>
+                                    </ul>
+                                    
+                                    <h5 class="mt-4">Manfaat Bisnis yang Didapat</h5>
+                                    <ul class="feature-list">
+                                        <li><i class="fas fa-check-circle"></i> Hemat waktu dan tenaga operasional</li>
+                                        <li><i class="fas fa-check-circle"></i> Tidak perlu tim admin besar</li>
+                                        <li><i class="fas fa-check-circle"></i> Respon pelanggan instan 24 jam</li>
+                                        <li><i class="fas fa-check-circle"></i> Data pelanggan tersimpan otomatis</li>
+                                        <li><i class="fas fa-check-circle"></i> Peningkatan konversi hingga 3x lebih cepat</li>
+                                        <li><i class="fas fa-check-circle"></i> Sistem bisa dikembangkan tanpa ganti platform</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Division 4: Branding & Creative Design -->
+            <div class="row mb-5">
+                <div class="col-lg-12">
+                    <div class="division-card">
+                        <div class="division-header division-4">
+                            <i class="fas fa-palette me-2"></i> Divisi 4: Branding & Desain Kreatif
+                        </div>
+                        <div class="division-body">
+                            <p class="mb-4">Fokus: Membangun identitas visual dan tampilan profesional agar bisnis kamu terlihat berkelas, konsisten, dan mudah diingat.</p>
+                            
+                            <!-- Tabs for Division 4 -->
+                            <ul class="nav nav-pills mb-3" id="division4-tabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="div4-utama-tab" data-bs-toggle="pill" data-bs-target="#div4-utama" type="button" role="tab" aria-controls="div4-utama" aria-selected="true">Layanan Utama</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="div4-paket-tab" data-bs-toggle="pill" data-bs-target="#div4-paket" type="button" role="tab" aria-controls="div4-paket" aria-selected="false">Paket Branding</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="div4-tambahan-tab" data-bs-toggle="pill" data-bs-target="#div4-tambahan" type="button" role="tab" aria-controls="div4-tambahan" aria-selected="false">Layanan Tambahan</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="div4-strategi-tab" data-bs-toggle="pill" data-bs-target="#div4-strategi" type="button" role="tab" aria-controls="div4-strategi" aria-selected="false">Strategi Branding</button>
+                                </li>
+                            </ul>
+                            
+                            <div class="tab-content" id="division4-tabContent">
+                                <!-- Layanan Utama Tab -->
+                                <div class="tab-pane fade show active" id="div4-utama" role="tabpanel" aria-labelledby="div4-utama-tab">
+                                    <div class="table-responsive">
+                                        <table class="service-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Layanan</th>
+                                                    <th>Deskripsi</th>
+                                                    <th>Harga</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>🖋️ Desain Logo (Identitas Merek)</td>
+                                                    <td>Desain logo profesional sesuai karakter bisnis. Termasuk 3 konsep dan revisi sampai puas.</td>
+                                                    <td class="price-tag">Basic: Rp 250.000<br>Premium: Rp 500.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>📘 Pedoman Merek / Buku Identitas Merek</td>
+                                                    <td>Panduan lengkap warna, tipografi, gaya visual, nada komunikasi, dan elemen desain merek kamu.</td>
+                                                    <td class="price-tag">Rp 600.000 – 1.000.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🏢 Rebranding & Desain Ulang Logo Lama</td>
+                                                    <td>Pembaruan logo lama menjadi lebih modern & relevan tanpa kehilangan identitas brand.</td>
+                                                    <td class="price-tag">Rp 350.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🎨 Desain Kartu Nama, Kop Surat, Amplop, dll.</td>
+                                                    <td>Paket desain untuk kebutuhan identitas perusahaan (stationery set).</td>
+                                                    <td class="price-tag">Rp 250.000 – 400.000/set</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>📱 Desain Feed & Story Instagram (Template)</td>
+                                                    <td>Template visual konten profesional sesuai gaya merek kamu.</td>
+                                                    <td class="price-tag">Rp 300.000 – 500.000/bulan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>📦 Desain Kemasan (Desain Kemasan)</td>
+                                                    <td>Desain label produk, kotak, pouch, atau kemasan custom.</td>
+                                                    <td class="price-tag">Rp 350.000 – 800.000/desain</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🪧 Promosi Spanduk, Brosur, Flyer, & Poster</td>
+                                                    <td>Desain cetak dan digital untuk promosi produk atau acara.</td>
+                                                    <td class="price-tag">Rp 150.000 – 400.000/desain</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>💼 Desain Profil Perusahaan (PDF / Cetak)</td>
+                                                    <td>Desain profil perusahaan profesional lengkap dengan konten & visualisasi.</td>
+                                                    <td class="price-tag">Rp 500.000 – 1.200.000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <!-- Paket Branding Tab -->
+                                <div class="tab-pane fade" id="div4-paket" role="tabpanel" aria-labelledby="div4-paket-tab">
+                                    <h4 class="mb-3">Paket Merek Lengkap</h4>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">Paket Branding Dasar</div>
+                                                <p>Logo + Kartu Nama + Banner Promosi</p>
+                                                <div class="price-tag fs-4">Rp 400.000</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">💼 Kit Merek Profesional</div>
+                                                <p>Logo + Panduan Merek + Set Alat Tulis + Template Umpan</p>
+                                                <div class="price-tag fs-4">Rp 800.000</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">Paket Identitas Perusahaan Premium</div>
+                                                <p>Logo + Panduan Merek + Profil Perusahaan + Brosur + Mockup</p>
+                                                <div class="price-tag fs-4">Rp 1.500.000</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">Paket Branding Produk</div>
+                                                <p>Logo + Kemasan + Banner + Katalog Produk</p>
+                                                <div class="price-tag fs-4">Rp 1.000.000</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">🧭 Paket Rebranding & Penyegaran Merek</div>
+                                                <p>Modernisasi visual brand lama + penyesuaian gaya konten & tone</p>
+                                                <div class="price-tag fs-4">Rp 900.000</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Layanan Tambahan Tab -->
+                                <div class="tab-pane fade" id="div4-tambahan" role="tabpanel" aria-labelledby="div4-tambahan-tab">
+                                    <h4 class="mb-3">Layanan Tambahan & Khusus</h4>
+                                    <div class="table-responsive">
+                                        <table class="service-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Add-On</th>
+                                                    <th>Deskripsi</th>
+                                                    <th>Harga</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>🎞️ Video Reel / Promo Produk (15–60 detik)</td>
+                                                    <td>Video singkat untuk iklan media sosial.</td>
+                                                    <td class="price-tag">Rp 300.000 – 700.000/video</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Panduan Suara Merek & Penulisan Naskah</td>
+                                                    <td>Dokumen gaya penulisan untuk caption, slogan, & promosi brand.</td>
+                                                    <td class="price-tag">Rp 200.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🧩 Produk Mockup (Pratinjau 3D)</td>
+                                                    <td>Visualisasi produk atau logo dalam tampilan nyata (render 3D).</td>
+                                                    <td class="price-tag">Rp 150.000/mockup</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>📷 Produk Pemotretan Mini (5–10 foto)</td>
+                                                    <td>Foto produk profesional untuk katalog & media sosial.</td>
+                                                    <td class="price-tag">Rp 400.000 – 800.000/sesi</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🖼️ Iklan Banner Digital (Google, Meta, TikTok)</td>
+                                                    <td>Desain visual iklan sesuai ukuran platform.</td>
+                                                    <td class="price-tag">Rp 150.000 – 300.000/set</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Desain Barang Dagangan Merek</td>
+                                                    <td>Desain kaos, tote bag, mug, atau merchandise promosi.</td>
+                                                    <td class="price-tag">Rp 250.000 – 400.000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <!-- Strategi Branding Tab -->
+                                <div class="tab-pane fade" id="div4-strategi" role="tabpanel" aria-labelledby="div4-strategi-tab">
+                                    <h4 class="mb-3">Strategi & Konsultasi Branding</h4>
+                                    <div class="table-responsive">
+                                        <table class="service-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Layanan</th>
+                                                    <th>Deskripsi</th>
+                                                    <th>Harga</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>🧭 Audit Merek & Analisis Posisi</td>
+                                                    <td>Tinjau total identitas merek dan saran strategi perbaikan.</td>
+                                                    <td class="price-tag">Rp 300.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>💬 Konsultasi Branding (1 jam melalui Zoom)</td>
+                                                    <td>Sesi diskusi langsung dengan tim desainer & strategist.</td>
+                                                    <td class="price-tag">Rp 150.000/sesi</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🧠 Dokumen Strategi Merek (Rencana Lengkap)</td>
+                                                    <td>Dokumen strategi membangun identitas & persepsi merek.</td>
+                                                    <td class="price-tag">Rp 500.000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    
+                                    <h5 class="mt-4">Keunggulan Divisi Desain Kreatif SITUNEO</h5>
+                                    <ul class="feature-list">
+                                        <li><i class="fas fa-check-circle"></i> Desainer profesional dengan pengalaman korporat & UMKM</li>
+                                        <li><i class="fas fa-check-circle"></i> Hasil desain 100% original dan hak cipta penuh</li>
+                                        <li><i class="fas fa-check-circle"></i> Gratis 2x revisi besar + minor revisi tanpa batas</li>
+                                        <li><i class="fas fa-check-circle"></i> Desain kompatibel untuk digital & cetak</li>
+                                        <li><i class="fas fa-check-circle"></i> Dapatkan file mentahan (AI, PSD, PDF, PNG)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Division 5: Content & Copywriting -->
+            <div class="row mb-5">
+                <div class="col-lg-12">
+                    <div class="division-card">
+                        <div class="division-header division-5">
+                            <i class="fas fa-pen-fancy me-2"></i> Divisi 5: Konten & Copywriting
+                        </div>
+                        <div class="division-body">
+                            <p class="mb-4">Fokus: Membuat konten yang menarik, menjual, dan SEO-friendly untuk website, media sosial, dan kampanye digital.</p>
+                            
+                            <!-- Tabs for Division 5 -->
+                            <ul class="nav nav-pills mb-3" id="division5-tabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="div5-utama-tab" data-bs-toggle="pill" data-bs-target="#div5-utama" type="button" role="tab" aria-controls="div5-utama" aria-selected="true">Layanan Utama</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="div5-gaya-tab" data-bs-toggle="pill" data-bs-target="#div5-gaya" type="button" role="tab" aria-controls="div5-gaya" aria-selected="false">Gaya Penulisan</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="div5-paket-tab" data-bs-toggle="pill" data-bs-target="#div5-paket" type="button" role="tab" aria-controls="div5-paket" aria-selected="false">Paket Konten</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="div5-addon-tab" data-bs-toggle="pill" data-bs-target="#div5-addon" type="button" role="tab" aria-controls="div5-addon" aria-selected="false">Fitur Add-On</button>
+                                </li>
+                            </ul>
+                            
+                            <div class="tab-content" id="division5-tabContent">
+                                <!-- Layanan Utama Tab -->
+                                <div class="tab-pane fade show active" id="div5-utama" role="tabpanel" aria-labelledby="div5-utama-tab">
+                                    <div class="table-responsive">
+                                        <table class="service-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Layanan</th>
+                                                    <th>Deskripsi</th>
+                                                    <th>Harga</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>🖋️ Halaman Arahan Penulisan Naskah</td>
+                                                    <td>Teks promosi persuasif untuk halaman website yang dirancang agar meningkatkan konversi.</td>
+                                                    <td class="price-tag">Rp 150.000/halaman</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>📄 Artikel SEO (Blog / Website)</td>
+                                                    <td>Artikel yang dioptimasi kata kunci Google, cocok untuk meningkatkan trafik organik.</td>
+                                                    <td class="price-tag">Rp 75.000/artikel (500–700 kata)<br>Rp 120.000/artikel (1000–1500 kata)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>📱 Caption Media Sosial (Instagram / Facebook / TikTok)</td>
+                                                    <td>Teks ringan, menarik, dan mengundang interaksi.</td>
+                                                    <td class="price-tag">Rp 10.000/caption atau Rp 250.000/30 caption (paket bulanan)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🧠 Iklan Copywriting (Meta / Google / TikTok)</td>
+                                                    <td>Judul, deskripsi, dan CTA iklan profesional untuk kampanye digital.</td>
+                                                    <td class="price-tag">Rp 150.000/kampanye</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🏪 Deskripsi Produk / Salinan E-niaga</td>
+                                                    <td>Penulisan deskripsi produk menarik untuk marketplace & toko online.</td>
+                                                    <td class="price-tag">Rp 15.000/produk atau Rp 300.000/30 produk</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>💼 Penulisan Naskah Profil Perusahaan</td>
+                                                    <td>Penulisan teks profil perusahaan formal & profesional.</td>
+                                                    <td class="price-tag">Rp 300.000 – 600.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>📧 Penulisan Salinan Pemasaran Email</td>
+                                                    <td>Teks promosi untuk email otomatis & buletin pelanggan.</td>
+                                                    <td class="price-tag">Rp 100.000/email atau Rp 250.000/5 email</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>💬 Naskah Video / Pengisi Suara</td>
+                                                    <td>Penulisan naskah video promosi, reels, atau iklan berdurasi 15–60 detik.</td>
+                                                    <td class="price-tag">Rp 100.000/naskah</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <!-- Gaya Penulisan Tab -->
+                                <div class="tab-pane fade" id="div5-gaya" role="tabpanel" aria-labelledby="div5-gaya-tab">
+                                    <h4 class="mb-3">Kategori Gaya Penulisan</h4>
+                                    <div class="table-responsive">
+                                        <table class="service-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Jenis Copy</th>
+                                                    <th>Cocok Untuk</th>
+                                                    <th>Ciri Utama</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>✨ Salinan Bercerita</td>
+                                                    <td>Kesadaran merek & konten sosial</td>
+                                                    <td>Cerita yang menyentuh dan berhubungan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>💰 Salinan Penjualan</td>
+                                                    <td>Halaman arahan, iklan, promosi</td>
+                                                    <td>Fokus ke keuntungan & urgensi</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🧭 Salinan Informasi</td>
+                                                    <td>Blog, profil perusahaan</td>
+                                                    <td>Edukatif dan profesional</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>❤️ Salinan Emosional</td>
+                                                    <td>Produk gaya hidup, merek pribadi</td>
+                                                    <td>Fokus ke emosi & nilai pembaca</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🧠 Salinan Teknis</td>
+                                                    <td>Produk IT, software, AI</td>
+                                                    <td>Berisi spesifikasi & fungsi teknis</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <!-- Paket Konten Tab -->
+                                <div class="tab-pane fade" id="div5-paket" role="tabpanel" aria-labelledby="div5-paket-tab">
+                                    <h4 class="mb-3">Paket Penulisan Konten</h4>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">✍️ Paket Konten Dasar</div>
+                                                <p>5 Artikel SEO + 10 Caption IG</p>
+                                                <div class="price-tag fs-4">Rp 400.000</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">Paket Pertumbuhan Bisnis</div>
+                                                <p>10 Artikel SEO + 20 Caption + Copywriting Iklan</p>
+                                                <div class="price-tag fs-4">Rp 700.000</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">Paket Konten Merek Lengkap</div>
+                                                <p>15 Artikel + 30 Caption + 2 Landing Page</p>
+                                                <div class="price-tag fs-4">Rp 1.200.000</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">Paket Strategi Konten Premium</div>
+                                                <p>Riset kata kunci + perencanaan + 10 artikel + laporan analitik</p>
+                                                <div class="price-tag fs-4">Rp 1.000.000</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">Paket Salinan E-Commerce</div>
+                                                <p>50 Deskripsi Produk + Copy Iklan + Teks Banner</p>
+                                                <div class="price-tag fs-4">Rp 700.000</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Fitur Add-On Tab -->
+                                <div class="tab-pane fade" id="div5-addon" role="tabpanel" aria-labelledby="div5-addon-tab">
+                                    <h4 class="mb-3">Fitur Tambahan (Add-On)</h4>
+                                    <div class="table-responsive">
+                                        <table class="service-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Add-On</th>
+                                                    <th>Deskripsi</th>
+                                                    <th>Harga</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>🔍 Riset Kata Kunci SEO</td>
+                                                    <td>Analisis kata kunci terbaik untuk niche bisnis kamu.</td>
+                                                    <td class="price-tag">Rp 150.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🧾 Optimasi SEO Artikel On-Page</td>
+                                                    <td>Menambahkan meta title, meta deskripsi, dan heading yang optimal.</td>
+                                                    <td class="price-tag">Rp 100.000/10 artikel</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🎨 Desain Konten Visual (Canva/Feed IG)</td>
+                                                    <td>Desain pendukung untuk caption & artikel promosi.</td>
+                                                    <td class="price-tag">Rp 250.000/bulan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🧩 Optimasi Konten AI</td>
+                                                    <td>Penyesuaian berbasis konten AI agar lebih menarik & relevan.</td>
+                                                    <td class="price-tag">Rp 100.000/bulan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🗓️ Kalender Editorial (3 Bulan)</td>
+                                                    <td>Jadwal strategi konten digital untuk 3 bulan ke depan.</td>
+                                                    <td class="price-tag">Rp 400.000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    
+                                    <h5 class="mt-4">Keunggulan Divisi Konten & SITUNEO Copywriting</h5>
+                                    <ul class="feature-list">
+                                        <li><i class="fas fa-check-circle"></i> Ditulis oleh tim profesional dengan riset industri</li>
+                                        <li><i class="fas fa-check-circle"></i> Sudah dioptimasi SEO dan siap terbitkan</li>
+                                        <li><i class="fas fa-check-circle"></i> Disesuaikan dengan tone & karakter brand kamu</li>
+                                        <li><i class="fas fa-check-circle"></i> Revisi gratis sampai hasil sesuai</li>
+                                        <li><i class="fas fa-check-circle"></i> Dapat dikombinasikan langsung dengan paket website & marketing</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Division 6: Data, Analytics & Optimization -->
+            <div class="row mb-5">
+                <div class="col-lg-12">
+                    <div class="division-card">
+                        <div class="division-header division-6">
+                            <i class="fas fa-chart-bar me-2"></i> Divisi 6: Data, Analitik & Optimasi
+                        </div>
+                        <div class="division-body">
+                            <p class="mb-4">Fokus: Mengubah data bisnis menjadi wawasan dan keputusan cerdas untuk meningkatkan kinerja, efisiensi, dan keuntungan.</p>
+                            
+                            <!-- Tabs for Division 6 -->
+                            <ul class="nav nav-pills mb-3" id="division6-tabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="div6-utama-tab" data-bs-toggle="pill" data-bs-target="#div6-utama" type="button" role="tab" aria-controls="div6-utama" aria-selected="true">Layanan Utama</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="div6-analitik-tab" data-bs-toggle="pill" data-bs-target="#div6-analitik" type="button" role="tab" aria-controls="div6-analitik" aria-selected="false">Analitik Berbasis Data</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="div6-optimasi-tab" data-bs-toggle="pill" data-bs-target="#div6-optimasi" type="button" role="tab" aria-controls="div6-optimasi" aria-selected="false">Optimasi Bisnis</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="div6-paket-tab" data-bs-toggle="pill" data-bs-target="#div6-paket" type="button" role="tab" aria-controls="div6-paket" aria-selected="false">Paket Kombinasi</button>
+                                </li>
+                            </ul>
+                            
+                            <div class="tab-content" id="division6-tabContent">
+                                <!-- Layanan Utama Tab -->
+                                <div class="tab-pane fade show active" id="div6-utama" role="tabpanel" aria-labelledby="div6-utama-tab">
+                                    <div class="table-responsive">
+                                        <table class="service-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Layanan</th>
+                                                    <th>Deskripsi</th>
+                                                    <th>Harga</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>📈 Penyiapan & Pelaporan Google Analytics 4</td>
+                                                    <td>Instalasi dan konfigurasi GA4 untuk melacak lalu lintas, sumber pengunjung, dan konversi bisnis.</td>
+                                                    <td class="price-tag">Rp 250.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Pelacakan Konversi (Meta Pixel, TikTok, Google Tag)</td>
+                                                    <td>Pemasangan & pengaturan tracking event untuk mengukur hasil iklan secara akurat.</td>
+                                                    <td class="price-tag">Rp 200.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🧾 Dasbor Insight Bisnis (Google Data Studio / Power BI)</td>
+                                                    <td>Dashboard interaktif untuk menyatukan penjualan, prospek, kinerja iklan, dan lalu lintas.</td>
+                                                    <td class="price-tag">Rp 500.000 – 1.000.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🤖 Analisis Bisnis AI</td>
+                                                    <td>Sistem analitik berbasis AI untuk mendeteksi tren, perilaku pelanggan, dan prediksi penjualan.</td>
+                                                    <td class="price-tag">Rp 800.000/bulan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🧮 Audit Optimasi Kinerja</td>
+                                                    <td>Audit data website, SEO, dan iklan untuk menentukan strategi optimasi terbaik.</td>
+                                                    <td class="price-tag">Rp 400.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Pengujian A/B & Optimasi Konversi</td>
+                                                    <td>Uji perbandingan landing page, CTA, atau desain untuk tingkatkan konversi.</td>
+                                                    <td class="price-tag">Rp 300.000/bulan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>📊 Laporan Kinerja Pemasaran (Bulanan)</td>
+                                                    <td>Laporan kinerja digital marketing lengkap dengan rekomendasi optimasi.</td>
+                                                    <td class="price-tag">Rp 250.000/bulan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>⚡ Audit Kecepatan & Performa Situs Web</td>
+                                                    <td>Analisis kecepatan & kinerja situs web (Core Web Vitals).</td>
+                                                    <td class="price-tag">Rp 200.000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <!-- Analitik Berbasis Data Tab -->
+                                <div class="tab-pane fade" id="div6-analitik" role="tabpanel" aria-labelledby="div6-analitik-tab">
+                                    <h4 class="mb-3">Analitik Berbasis Data & AI</h4>
+                                    <div class="table-responsive">
+                                        <table class="service-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Jenis Analitik</th>
+                                                    <th>Fungsi</th>
+                                                    <th>Harga</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>🧠 Analisis Perilaku Pelanggan</td>
+                                                    <td>Analisis perilaku pelanggan di website & media sosial.</td>
+                                                    <td class="price-tag">Rp 400.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Pelacakan Corong Penjualan</td>
+                                                    <td>Melacak perjalanan pelanggan dari klik hingga transaksi.</td>
+                                                    <td class="price-tag">Rp 300.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🧩 Peta Panas & Pemetaan Perjalanan Pengguna</td>
+                                                    <td>Visualisasi area yang paling sering diklik / dikunjungi pengguna.</td>
+                                                    <td class="price-tag">Rp 400.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🤖 Analisis Prediktif (Peramalan AI)</td>
+                                                    <td>Prediksi penjualan, traffic, dan potensi pelanggan baru.</td>
+                                                    <td class="price-tag">Rp 600.000/bulan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🧾 Analisis ROI & Efisiensi Biaya</td>
+                                                    <td>Mengukur efektivitas biaya pemasaran & profitabilitas.</td>
+                                                    <td class="price-tag">Rp 250.000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <!-- Optimasi Bisnis Tab -->
+                                <div class="tab-pane fade" id="div6-optimasi" role="tabpanel" aria-labelledby="div6-optimasi-tab">
+                                    <h4 class="mb-3">Optimasi Bisnis Digital</h4>
+                                    <div class="table-responsive">
+                                        <table class="service-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Jenis Optimasi</th>
+                                                    <th>Deskripsi</th>
+                                                    <th>Harga</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Optimasi SEO (Lanjutan)</td>
+                                                    <td>Optimasi data on-page & off-page berdasarkan laporan analitik.</td>
+                                                    <td class="price-tag">Rp 300.000/bulan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>💬 Pengoptimalan Iklan (Meta, Google, TikTok)</td>
+                                                    <td>Optimasi kampanye iklan berdasarkan performa dan data real-time.</td>
+                                                    <td class="price-tag">Rp 350.000/bulan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Optimasi Konversi Situs Web</td>
+                                                    <td>Penyesuaian UI/UX & CTA untuk meningkatkan lead dan pembelian.</td>
+                                                    <td class="price-tag">Rp 400.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🧠 Penganalisis Kinerja Konten AI</td>
+                                                    <td>Evaluasi kinerja konten berdasarkan keterlibatan & RKT.</td>
+                                                    <td class="price-tag">Rp 200.000/bulan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Rencana Strategi Berbasis Data</td>
+                                                    <td>Rencana strategi pemasaran berbasis data (3 bulan).</td>
+                                                    <td class="price-tag">Rp 500.000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <!-- Paket Kombinasi Tab -->
+                                <div class="tab-pane fade" id="div6-paket" role="tabpanel" aria-labelledby="div6-paket-tab">
+                                    <h4 class="mb-3">Paket Kombinasi Data & Optimasi</h4>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">Paket Pelacak Data Dasar</div>
+                                                <p>Pengaturan GA4 + Meta Pixel + Laporan Bulanan</p>
+                                                <div class="price-tag fs-4">Rp 500.000/bulan</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">⚙️ Paket Pro Optimasi</div>
+                                                <p>Analisis Dasbor + Audit SEO + Pengujian A/B</p>
+                                                <div class="price-tag fs-4">Rp 900.000/bulan</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">Paket Wawasan Bisnis AI</div>
+                                                <p>Dasbor + AI Prediktif + Laporan ROI</p>
+                                                <div class="price-tag fs-4">Rp 1.500.000/bulan</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">🚀 Paket Peningkat Performa</div>
+                                                <p>Pelacakan penuh, audit kecepatan, dan corong optimasi</p>
+                                                <div class="price-tag fs-4">Rp 1.000.000/bulan</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <h5 class="mt-4">Keunggulan Divisi Data & Optimasi SITUNEO</h5>
+                                    <ul class="feature-list">
+                                        <li><i class="fas fa-check-circle"></i> Semua keputusan berbasis data, bukan asumsi</li>
+                                        <li><i class="fas fa-check-circle"></i> Dapat digabungkan dengan marketing, website, & CRM</li>
+                                        <li><i class="fas fa-check-circle"></i> Laporan transparan dengan visualisasi interaktif</li>
+                                        <li><i class="fas fa-check-circle"></i> Mendukung UMKM, e-commerce, dan perusahaan besar</li>
+                                        <li><i class="fas fa-check-circle"></i> teknologi Gunakan AI untuk analisis prediktif</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Division 7: Legal, Domain & Infrastructure -->
+            <div class="row mb-5">
+                <div class="col-lg-12">
+                    <div class="division-card">
+                        <div class="division-header division-7">
+                            <i class="fas fa-shield-alt me-2"></i> Divisi 7: Legalitas, Domain & Infrastruktur
+                        </div>
+                        <div class="division-body">
+                            <p class="mb-4">Fokus: Mengurus semua hal teknis & legal untuk bisnis digital agar aman, kredibel, dan profesional — mulai dari domain, hosting, SSL, hingga perizinan resmi seperti NIB & legalitas online.</p>
+                            
+                            <!-- Tabs for Division 7 -->
+                            <ul class="nav nav-pills mb-3" id="division7-tabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="div7-domain-tab" data-bs-toggle="pill" data-bs-target="#div7-domain" type="button" role="tab" aria-controls="div7-domain" aria-selected="true">Domain & Infrastruktur</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="div7-keamanan-tab" data-bs-toggle="pill" data-bs-target="#div7-keamanan" type="button" role="tab" aria-controls="div7-keamanan" aria-selected="false">Keamanan Website</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="div7-legal-tab" data-bs-toggle="pill" data-bs-target="#div7-legal" type="button" role="tab" aria-controls="div7-legal" aria-selected="false">Legalitas Bisnis</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="div7-paket-tab" data-bs-toggle="pill" data-bs-target="#div7-paket" type="button" role="tab" aria-controls="div7-paket" aria-selected="false">Paket Kombinasi</button>
+                                </li>
+                            </ul>
+                            
+                            <div class="tab-content" id="division7-tabContent">
+                                <!-- Domain & Infrastruktur Tab -->
+                                <div class="tab-pane fade show active" id="div7-domain" role="tabpanel" aria-labelledby="div7-domain-tab">
+                                    <div class="table-responsive">
+                                        <table class="service-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Layanan</th>
+                                                    <th>Deskripsi</th>
+                                                    <th>Harga</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>🌍 Pendaftaran Domain (.com / .id / .net / dsb)</td>
+                                                    <td>Bantu kamu pilih & daftarkan nama domain sesuai brand.</td>
+                                                    <td class="price-tag">Rp 150.000 – 300.000 / tahun</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>💾 Hosting Situs Web (Shared/Cloud/VPS)</td>
+                                                    <td>Tempat penyimpanan website cepat & aman sesuai kebutuhan traffic.</td>
+                                                    <td class="price-tag">Rp 150.000 – 500.000 / tahun</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🔐 Pengaturan Sertifikat SSL (Keamanan HTTPS)</td>
+                                                    <td>Aktivasi sertifikat keamanan agar website aman & dipercaya Google.</td>
+                                                    <td class="price-tag">Rp 100.000 – 250.000 / tahun</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>⚙️ Manajemen & Optimasi Server</td>
+                                                    <td>Setup server (cPanel, Plesk, Cloudflare) dan optimasi kinerja.</td>
+                                                    <td class="price-tag">Rp 300.000 – 800.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>☁️ Penerapan Cloud (AWS / Google Cloud / DigitalOcean)</td>
+                                                    <td>Menyebarkan situs web & sistem ke server cloud profesional.</td>
+                                                    <td class="price-tag">Rp 700.000 – 1.200.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🧱 Sistem Pencadangan & Pemulihan</td>
+                                                    <td>Pencadangan otomatis mingguan & pemulihan data darurat.</td>
+                                                    <td class="price-tag">Rp 150.000/bulan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🧩 Email Bisnis (nama@domainkamu.com)</td>
+                                                    <td>Siapkan email profesional dengan kapasitas besar (Google / Zoho / cPanel).</td>
+                                                    <td class="price-tag">Rp 100.000 – 200.000 / akun / tahun</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>⚡ Layanan Migrasi Situs Web</td>
+                                                    <td>Migrasi website lama ke server/domain baru tanpa downtime.</td>
+                                                    <td class="price-tag">Rp 250.000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <!-- Keamanan Website Tab -->
+                                <div class="tab-pane fade" id="div7-keamanan" role="tabpanel" aria-labelledby="div7-keamanan-tab">
+                                    <h4 class="mb-3">Website Layanan Keamanan & Proteksi</h4>
+                                    <div class="table-responsive">
+                                        <table class="service-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Layanan</th>
+                                                    <th>Deskripsi</th>
+                                                    <th>Harga</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>🔐 Pengaturan Firewall & Anti-DDOS</td>
+                                                    <td>Lindungi website dari serangan hacker & traffic berbahaya.</td>
+                                                    <td class="price-tag">Rp 300.000 – 600.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🧠 Pemantauan Keamanan (Peringatan Waktu Nyata)</td>
+                                                    <td>Sistem pemantauan otomatis 24 jam untuk mendeteksi anomali & malware.</td>
+                                                    <td class="price-tag">Rp 200.000/bulan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>⚡ Layanan Pembersihan Malware & Virus</td>
+                                                    <td>Bersihkan website yang terinfeksi virus/malware.</td>
+                                                    <td class="price-tag">Rp 250.000 – 500.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🧱 Login & Perlindungan Brute Force</td>
+                                                    <td>Pengamanan login admin dengan batasan 2FA & IP.</td>
+                                                    <td class="price-tag">Rp 150.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🧮 Audit & Penguatan Keamanan</td>
+                                                    <td>Audit penuh keamanan sistem, database, dan konfigurasi server.</td>
+                                                    <td class="price-tag">Rp 400.000 – 800.000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <!-- Legalitas Bisnis Tab -->
+                                <div class="tab-pane fade" id="div7-legal" role="tabpanel" aria-labelledby="div7-legal-tab">
+                                    <h4 class="mb-3">Layanan Legalitas Bisnis Digital</h4>
+                                    <div class="table-responsive">
+                                        <table class="service-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Layanan</th>
+                                                    <th>Deskripsi</th>
+                                                    <th>Harga</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>🧩 Pembuatan NIB (Nomor Induk Berusaha)</td>
+                                                    <td>Legalitas dasar untuk bisnis agar terdaftar di sistem OSS.</td>
+                                                    <td class="price-tag">Rp 350.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🧠 Legalitas Bisnis Online (E-Commerce / Freelancer / Agensi)</td>
+                                                    <td>Konsultasi & pengurusan izin usaha berbasis digital.</td>
+                                                    <td class="price-tag">Rp 500.000 – 1.000.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🧾 Generator Kebijakan Privasi & Ketentuan</td>
+                                                    <td>Dokumen privasi & ketentuan penggunaan untuk website profesional.</td>
+                                                    <td class="price-tag">Rp 150.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>💼 Pendaftaran Merek Dagang (Bantuan Konsultasi)</td>
+                                                    <td>Pendaftaran merek resmi ke Kemenkumham RI.</td>
+                                                    <td class="price-tag">Rp 1.000.000 – 2.500.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>⚖️ Perjanjian Kerja Sama / Vendor / Reseller</td>
+                                                    <td>Draft perjanjian hukum digital berbasis template bisnis.</td>
+                                                    <td class="price-tag">Rp 300.000 – 800.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>📜 Pembuatan PT / CV / Yayasan Digital</td>
+                                                    <td>Pendampingan pembuatan badan usaha resmi.</td>
+                                                    <td class="price-tag">Rp 1.500.000 – 3.000.000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <!-- Paket Kombinasi Tab -->
+                                <div class="tab-pane fade" id="div7-paket" role="tabpanel" aria-labelledby="div7-paket-tab">
+                                    <h4 class="mb-3">Paket Domain, Hosting & Keamanan</h4>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">🌐 Paket Web Pemula</div>
+                                                <p>Domain .com + Hosting Dasar + SSL</p>
+                                                <div class="price-tag fs-4">Rp 350.000 / tahun</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">⚡ Paket Web Aman</div>
+                                                <p>Domain .com + Hosting + SSL + Cadangan + Pemindaian Keamanan</p>
+                                                <div class="price-tag fs-4">Rp 550.000 / tahun</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">☁️ Paket Cloud Bisnis</div>
+                                                <p>Domain .id + Cloud Hosting + SSL + Email Bisnis + Firewall</p>
+                                                <div class="price-tag fs-4">Rp 900.000 / tahun</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">🛡️ Paket Keamanan Pro</div>
+                                                <p>Firewall + Pemantauan Waktu Nyata + Pencadangan + Audit</p>
+                                                <div class="price-tag fs-4">Rp 600.000 / tahun</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">Paket Infrastruktur + Hukum Lengkap</div>
+                                                <p>Domain + Hosting + SSL + NIB + Dokumen Hukum</p>
+                                                <div class="price-tag fs-4">Rp 1.000.000 – 1.500.000 / tahun</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <h5 class="mt-4">Keunggulan Divisi Legalitas & Infrastruktur SITUNEO</h5>
+                                    <ul class="feature-list">
+                                        <li><i class="fas fa-check-circle"></i> Domain & server 99.9% uptime</li>
+                                        <li><i class="fas fa-check-circle"></i> Sistem keamanan berlapis (firewall, SSL, backup)</li>
+                                        <li><i class="fas fa-check-circle"></i> Legalitas bisnis resmi (NIB, PT, CV)</li>
+                                        <li><i class="fas fa-check-circle"></i> Layanan cepat, transparan & profesional</li>
+                                        <li><i class="fas fa-check-circle"></i> Integrasi langsung dengan divisi website & sistem AI</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Division 8: Client Service & Customer Experience -->
+            <div class="row mb-5">
+                <div class="col-lg-12">
+                    <div class="division-card">
+                        <div class="division-header division-8">
+                            <i class="fas fa-headset me-2"></i> Divisi 8: Layanan Klien & Pengalaman Pelanggan
+                        </div>
+                        <div class="division-body">
+                            <p class="mb-4">Fokus: Membangun hubungan jangka panjang dengan klien melalui pelayanan yang cepat, sistematis, dan manusiawi — dibantu teknologi otomatis & AI.</p>
+                            
+                            <!-- Tabs for Division 8 -->
+                            <ul class="nav nav-pills mb-3" id="division8-tabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="div8-utama-tab" data-bs-toggle="pill" data-bs-target="#div8-utama" type="button" role="tab" aria-controls="div8-utama" aria-selected="true">Layanan Utama</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="div8-otomasi-tab" data-bs-toggle="pill" data-bs-target="#div8-otomasi" type="button" role="tab" aria-controls="div8-otomasi" aria-selected="false">Sistem Otomasi</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="div8-monitoring-tab" data-bs-toggle="pill" data-bs-target="#div8-monitoring" type="button" role="tab" aria-controls="div8-monitoring" aria-selected="false">Monitoring Pelanggan</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="div8-paket-tab" data-bs-toggle="pill" data-bs-target="#div8-paket" type="button" role="tab" aria-controls="div8-paket" aria-selected="false">Paket CX</button>
+                                </li>
+                            </ul>
+                            
+                            <div class="tab-content" id="division8-tabContent">
+                                <!-- Layanan Utama Tab -->
+                                <div class="tab-pane fade show active" id="div8-utama" role="tabpanel" aria-labelledby="div8-utama-tab">
+                                    <div class="table-responsive">
+                                        <table class="service-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Layanan</th>
+                                                    <th>Deskripsi</th>
+                                                    <th>Harga</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>💬 Pusat Dukungan Pelanggan (Sistem Obrolan & Tiket)</td>
+                                                    <td>Sistem layanan pelanggan terintegrasi melalui WhatsApp, email, & dashboard.</td>
+                                                    <td class="price-tag">Rp 250.000/bulan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🤖 Chatbot Otomatis (Dukungan AI)</td>
+                                                    <td>Chatbot pintar di WhatsApp / Website untuk auto-reply & auto-funnel pelanggan.</td>
+                                                    <td class="price-tag">Rp 300.000 – 700.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Dukungan Purnajual & Perawatan</td>
+                                                    <td>Dukungan teknis pasca pembuatan website/sistem (update, perbaikan bug, konsultasi).</td>
+                                                    <td class="price-tag">Rp 200.000/bulan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🧾 Sistem Tiket & Layanan Pelacakan</td>
+                                                    <td>Klien bisa mengirim keluhan / permintaan dan mengomunikasikan kemajuan layanan.</td>
+                                                    <td class="price-tag">Rp 250.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🧠 Konsultasi & Strategi Bisnis Digital (1-on-1)</td>
+                                                    <td>Sesi strategi langsung bersama tim ahli SITUNEO.</td>
+                                                    <td class="price-tag">Rp 300.000/sesi</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>📅 Program Orientasi Klien</td>
+                                                    <td>Panduan & pelatihan penggunaan sistem digital/website untuk klien baru.</td>
+                                                    <td class="price-tag">Rp 150.000 – 300.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Sistem Loyalitas & Penghargaan Pelanggan</td>
+                                                    <td>Sistem poin & cashback untuk pelanggan tetap.</td>
+                                                    <td class="price-tag">Rp 500.000 – 1.000.000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <!-- Sistem Otomasi Tab -->
+                                <div class="tab-pane fade" id="div8-otomasi" role="tabpanel" aria-labelledby="div8-otomasi-tab">
+                                    <h4 class="mb-3">Sistem Otomasi Layanan</h4>
+                                    <div class="table-responsive">
+                                        <table class="service-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Layanan</th>
+                                                    <th>Deskripsi</th>
+                                                    <th>Harga</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>⚙️ CRM (Manajemen Hubungan Pelanggan)</td>
+                                                    <td>Dashboard pengelolaan data pelanggan, aktivitas, dan tindak lanjut otomatis.</td>
+                                                    <td class="price-tag">Rp 400.000 – 800.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>📩 WhatsApp Blast (Siaran Otomatis)</td>
+                                                    <td>Kirim pesan promosi massal ke database pelanggan (tanpa spam).</td>
+                                                    <td class="price-tag">Rp 250.000/bulan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>✉️ Otomatisasi Email (Tindak Lanjut, Promo, Pengingat)</td>
+                                                    <td>Sistem email otomatis untuk meningkatkan retensi pelanggan.</td>
+                                                    <td class="price-tag">Rp 200.000/bulan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Sistem Respons AI (Obrolan + Email)</td>
+                                                    <td>AI yang menjawab pertanyaan dasar pelanggan 24/7.</td>
+                                                    <td class="price-tag">Rp 350.000/bulan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Sistem Umpan Balik & Peringkat</td>
+                                                    <td>Fitur form & rating otomatis untuk menilai layanan.</td>
+                                                    <td class="price-tag">Rp 150.000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <!-- Monitoring Pelanggan Tab -->
+                                <div class="tab-pane fade" id="div8-monitoring" role="tabpanel" aria-labelledby="div8-monitoring-tab">
+                                    <h4 class="mb-3">Monitoring & Analitik Pelanggan</h4>
+                                    <div class="table-responsive">
+                                        <table class="service-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Layanan</th>
+                                                    <th>Deskripsi</th>
+                                                    <th>Harga</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>📊 Dasbor Pengalaman Pelanggan</td>
+                                                    <td>Pantau tingkat kepuasan, respon, dan kinerja tim support.</td>
+                                                    <td class="price-tag">Rp 500.000 – 800.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Wawasan Data Pelanggan (Perilaku & Retensi)</td>
+                                                    <td>Analisis perilaku pelanggan berdasarkan interaksi & pembelian.</td>
+                                                    <td class="price-tag">Rp 400.000/bulan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🔁 Laporan Tingkat Churn & Loyalitas</td>
+                                                    <td>Laporan bulanan pelanggan aktif, hilang, dan retensi.</td>
+                                                    <td class="price-tag">Rp 300.000/bulan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Analisis Sentimen AI</td>
+                                                    <td>Analisis otomatis terhadap pesan pelanggan (positif / negatif).</td>
+                                                    <td class="price-tag">Rp 400.000/bulan</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <!-- Paket CX Tab -->
+                                <div class="tab-pane fade" id="div8-paket" role="tabpanel" aria-labelledby="div8-paket-tab">
+                                    <h4 class="mb-3">Paket Layanan CX (Pengalaman Pelanggan)</h4>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">Paket Dukungan Dasar</div>
+                                                <p>Sistem tiket + chat + laporan bulanan CX</p>
+                                                <div class="price-tag fs-4">Rp 350.000/bulan</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">🤖 Paket Dukungan AI</div>
+                                                <p>Chatbot + Otomatisasi Email + CRM</p>
+                                                <div class="price-tag fs-4">Rp 800.000/bulan</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">Paket Wawasan CX</div>
+                                                <p>Dasbor + Sentimen AI + Laporan Loyalitas</p>
+                                                <div class="price-tag fs-4">Rp 1.000.000/bulan</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">Paket Pelanggan Premium</div>
+                                                <p>Dukungan penuh + CRM + chatbot + AI otomatis + sistem loyalitas</p>
+                                                <div class="price-tag fs-4">Rp 1.800.000/bulan</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <h5 class="mt-4">Keunggulan Divisi Customer Experience SITUNEO</h5>
+                                    <ul class="feature-list">
+                                        <li><i class="fas fa-check-circle"></i> Layanan support cepat, manusia + AI</li>
+                                        <li><i class="fas fa-check-circle"></i> Terintegrasi dengan CRM, WhatsApp, dan dashboard analitik</li>
+                                        <li><i class="fas fa-check-circle"></i> Sistem tiket otomatis untuk transparansi kerja</li>
+                                        <li><i class="fas fa-check-circle"></i> Dapat di-custom sesuai model bisnis (reseller, e-commerce, jasa, dll)</li>
+                                        <li><i class="fas fa-check-circle"></i> Dukungan 24 jam untuk klien premium</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Division 9: Education & Business Training -->
+            <div class="row mb-5">
+                <div class="col-lg-12">
+                    <div class="division-card">
+                        <div class="division-header division-9">
+                            <i class="fas fa-graduation-cap me-2"></i> Divisi 9: Edukasi & Pelatihan Bisnis
+                        </div>
+                        <div class="division-body">
+                            <p class="mb-4">Fokus: Membimbing tim & klien memahami strategi digital, alat pemasaran, serta penggunaan AI agar bisnis mereka bisa berjalan lebih efisien & modern.</p>
+                            
+                            <!-- Tabs for Division 9 -->
+                            <ul class="nav nav-pills mb-3" id="division9-tabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="div9-utama-tab" data-bs-toggle="pill" data-bs-target="#div9-utama" type="button" role="tab" aria-controls="div9-utama" aria-selected="true">Layanan Utama</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="div9-sertifikasi-tab" data-bs-toggle="pill" data-bs-target="#div9-sertifikasi" type="button" role="tab" aria-controls="div9-sertifikasi" aria-selected="false">Sertifikasi</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="div9-tambahan-tab" data-bs-toggle="pill" data-bs-target="#div9-tambahan" type="button" role="tab" aria-controls="div9-tambahan" aria-selected="false">Layanan Tambahan</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="div9-paket-tab" data-bs-toggle="pill" data-bs-target="#div9-paket" type="button" role="tab" aria-controls="div9-paket" aria-selected="false">Paket Pelatihan</button>
+                                </li>
+                            </ul>
+                            
+                            <div class="tab-content" id="division9-tabContent">
+                                <!-- Layanan Utama Tab -->
+                                <div class="tab-pane fade show active" id="div9-utama" role="tabpanel" aria-labelledby="div9-utama-tab">
+                                    <div class="table-responsive">
+                                        <table class="service-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Layanan</th>
+                                                    <th>Deskripsi</th>
+                                                    <th>Harga</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Pelatihan Pemasaran Digital 101</td>
+                                                    <td>Pelatihan dasar SEO, Meta Ads, TikTok Ads, dan Google Ads untuk pemula.</td>
+                                                    <td class="price-tag">Rp 350.000/sesi</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🧠 Workshop AI Tools & Otomasi Bisnis</td>
+                                                    <td>Pelatihan penggunaan ChatGPT, Notion AI, Canva AI, CRM Automation, dll.</td>
+                                                    <td class="price-tag">Rp 500.000/sesi</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>💼 Pelatihan Manajemen Website & CMS (WordPress / Custom)</td>
+                                                    <td>Belajar cara mengelola konten, produk, dan memperbarui situs web.</td>
+                                                    <td class="price-tag">Rp 300.000/sesi</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🎯 Strategi Pertumbuhan Bisnis Digital (UMKM & Startup)</td>
+                                                    <td>Workshop membangun corong pemasaran dan strategi branding secara online.</td>
+                                                    <td class="price-tag">Rp 400.000/sesi</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>📊 Pelatihan Data & Analitik Dasar</td>
+                                                    <td>Belajar membaca laporan Google Analytics, iklan wawasan, dan dashboard bisnis.</td>
+                                                    <td class="price-tag">Rp 350.000/sesi</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🤝 Pelatihan Tim Internal (Pelatihan Perusahaan)</td>
+                                                    <td>Pelatihan in-house untuk perusahaan, disesuaikan dengan kebutuhan bisnis.</td>
+                                                    <td class="price-tag">Rp 1.000.000 – 2.500.000 / sesi</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>📱 Kelas Online Mandiri (Platform E-Learning)</td>
+                                                    <td>Akses materi rekaman & panduan belajar melalui platform e-learning SITUNEO.</td>
+                                                    <td class="price-tag">Rp 150.000 / kursus</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <!-- Sertifikasi Tab -->
+                                <div class="tab-pane fade" id="div9-sertifikasi" role="tabpanel" aria-labelledby="div9-sertifikasi-tab">
+                                    <h4 class="mb-3">Sertifikasi & Pendampingan Program</h4>
+                                    <div class="table-responsive">
+                                        <table class="service-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Program</th>
+                                                    <th>Deskripsi</th>
+                                                    <th>Harga</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>🧾 Sertifikasi Profesional Pemasaran Digital</td>
+                                                    <td>Sertifikat resmi kelulusan pelatihan pemasaran digital.</td>
+                                                    <td class="price-tag">Rp 250.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🤖 Sertifikat Spesialis Otomasi AI</td>
+                                                    <td>Sertifikasi penguasaan alat AI & sistem otomatisasi bisnis.</td>
+                                                    <td class="price-tag">Rp 300.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>📊 Praktisi Data & Analisis</td>
+                                                    <td>Sertifikasi keahlian membaca dan mengelola data bisnis.</td>
+                                                    <td class="price-tag">Rp 250.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>💼 Program Pendampingan Bisnis 30 Hari</td>
+                                                    <td>Bimbingan langsung 1 bulan dalam penerapan strategi digital.</td>
+                                                    <td class="price-tag">Rp 1.000.000 – 1.500.000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <!-- Layanan Tambahan Tab -->
+                                <div class="tab-pane fade" id="div9-tambahan" role="tabpanel" aria-labelledby="div9-tambahan-tab">
+                                    <h4 class="mb-3">Pelatihan Tambahan & Khusus</h4>
+                                    <div class="table-responsive">
+                                        <table class="service-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Add-On</th>
+                                                    <th>Deskripsi</th>
+                                                    <th>Harga</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>📹 Video Tutorial Kustom (Untuk Klien)</td>
+                                                    <td>Video panduan cara menggunakan sistem/website milik klien.</td>
+                                                    <td class="price-tag">Rp 200.000 – 400.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>💬 Bimbingan Pribadi 1 lawan 1 (Zoom)</td>
+                                                    <td>Pelatihan pribadi dengan mentor digital strategist.</td>
+                                                    <td class="price-tag">Rp 250.000/jam</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🧩 Modul Pelatihan Kustom (Perusahaan Bermerek)</td>
+                                                    <td>Modul pelatihan sesuai SOP & branding perusahaan klien.</td>
+                                                    <td class="price-tag">Rp 500.000 – 1.000.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🧾 Rekaman Materi & E-Sertifikat Otomatis</td>
+                                                    <td>Klien dapat merekam & sertifikat digital setelah pelatihan.</td>
+                                                    <td class="price-tag">Rp 100.000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <!-- Paket Pelatihan Tab -->
+                                <div class="tab-pane fade" id="div9-paket" role="tabpanel" aria-labelledby="div9-paket-tab">
+                                    <h4 class="mb-3">Pelatihan Paket Kombinasi</h4>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">Paket Pembelajaran Dasar</div>
+                                                <p>2 sesi pelatihan + e-sertifikat</p>
+                                                <div class="price-tag fs-4">Rp 500.000</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">Paket Pembelajaran Bisnis Pro</div>
+                                                <p>4 sesi pelatihan + mentoring 1-on-1</p>
+                                                <div class="price-tag fs-4">Rp 900.000</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">Paket Produktivitas AI</div>
+                                                <p>Workshop AI + pendampingan 30 hari</p>
+                                                <div class="price-tag fs-4">Rp 1.200.000</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">Pelatihan Digital Perusahaan</div>
+                                                <p>Pelatihan tim internal + modul khusus</p>
+                                                <div class="price-tag fs-4">Rp 2.500.000 – 3.500.000</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <h5 class="mt-4">Keunggulan Divisi Pendidikan & Pelatihan</h5>
+                                    <ul class="feature-list">
+                                        <li><i class="fas fa-check-circle"></i> Pengajar berpengalaman di bidang digital & AI</li>
+                                        <li><i class="fas fa-check-circle"></i> Sistem e-learning modern (video + modul + ujian)</li>
+                                        <li><i class="fas fa-check-circle"></i> Sertifikat resmi SITUNEO</li>
+                                        <li><i class="fas fa-check-circle"></i> Materi bisa disesuaikan untuk UMKM, startup, & korporasi</li>
+                                        <li><i class="fas fa-check-circle"></i> Dapat observasi dengan sistem CRM & dashboard klien</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Division 10: Partnership, Licensing & Reseller -->
+            <div class="row mb-5">
+                <div class="col-lg-12">
+                    <div class="division-card">
+                        <div class="division-header division-10">
+                            <i class="fas fa-handshake me-2"></i> Divisi 10: Kemitraan, Lisensi & Reseller
+                        </div>
+                        <div class="division-body">
+                            <p class="mb-4">Fokus: Membangun jaringan bisnis berkelanjutan melalui program reseller, afiliasi, kolaborasi brand, dan lisensi produk digital SITUNEO.</p>
+                            
+                            <!-- Tabs for Division 10 -->
+                            <ul class="nav nav-pills mb-3" id="division10-tabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="div10-utama-tab" data-bs-toggle="pill" data-bs-target="#div10-utama" type="button" role="tab" aria-controls="div10-utama" aria-selected="true">Layanan Utama</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="div10-komisi-tab" data-bs-toggle="pill" data-bs-target="#div10-komisi" type="button" role="tab" aria-controls="div10-komisi" aria-selected="false">Sistem Komisi</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="div10-addon-tab" data-bs-toggle="pill" data-bs-target="#div10-addon" type="button" role="tab" aria-controls="div10-addon" aria-selected="false">Support Mitra</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="div10-paket-tab" data-bs-toggle="pill" data-bs-target="#div10-paket" type="button" role="tab" aria-controls="div10-paket" aria-selected="false">Paket Kemitraan</button>
+                                </li>
+                            </ul>
+                            
+                            <div class="tab-content" id="division10-tabContent">
+                                <!-- Layanan Utama Tab -->
+                                <div class="tab-pane fade show active" id="div10-utama" role="tabpanel" aria-labelledby="div10-utama-tab">
+                                    <div class="table-responsive">
+                                        <table class="service-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Layanan</th>
+                                                    <th>Deskripsi</th>
+                                                    <th>Harga / Investasi</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>💼 Situs Web Reseller Program</td>
+                                                    <td>Jadi reseller jasa pembuatan website dengan harga khusus.</td>
+                                                    <td class="price-tag">Rp 500.000 (Pendaftaran Awal)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🤝 Program Afiliasi Digital</td>
+                                                    <td>Dapatkan komisi tiap kali berhasil mereferensikan klien baru.</td>
+                                                    <td class="price-tag">Gratis (komisi 10–25%)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🔑 Lisensi Produk Digital SITUNEO</td>
+                                                    <td>Dapatkan sah lisensi untuk menjual ulang produk digital SITUNEO (AI tools, template, sistem).</td>
+                                                    <td class="price-tag">Rp 1.000.000 – 3.000.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>📦 Kemitraan Label Putih</td>
+                                                    <td>Gunakan merek kamu sendiri untuk menjual layanan SITUNEO.</td>
+                                                    <td class="price-tag">Rp 2.000.000 – 5.000.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>💬 Konsultan / Agen Wilayah (Mitra Regional)</td>
+                                                    <td>Jadi mitra resmi di daerah untuk representasi SITUNEO.</td>
+                                                    <td class="price-tag">Rp 5.000.000 – 10.000.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🧩 Kemitraan Korporat / Instansi</td>
+                                                    <td>Kerja sama layanan digital dengan lembaga pendidikan, instansi, atau pemerintah.</td>
+                                                    <td class="price-tag">Negosiasi (custom)</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <!-- Sistem Komisi Tab -->
+                                <div class="tab-pane fade" id="div10-komisi" role="tabpanel" aria-labelledby="div10-komisi-tab">
+                                    <h4 class="mb-3">Sistem Komisi & Manfaat</h4>
+                                    <div class="table-responsive">
+                                        <table class="service-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Jenis Mitra</th>
+                                                    <th>Komisi / Manfaat</th>
+                                                    <th>Catatan</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>🧑‍💼 Penjual kembali</td>
+                                                    <td>Diskon 30–50% dari harga publik</td>
+                                                    <td>Dapat materi branding & katalog</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🌐 Afiliasi</td>
+                                                    <td>Komisi 10–25% / klien</td>
+                                                    <td>Bisa promosi lewat link atau kode unik</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>💎 Lisensi Produk Digital</td>
+                                                    <td>Hak jual ulang produk SITUNEO</td>
+                                                    <td>Tanpa batas waktu (lisensi seumur hidup)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🧠 Mitra Regional</td>
+                                                    <td>Hak eksklusif wilayah + bonus tahunan</td>
+                                                    <td>Termasuk pelatihan & dukungan tim</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🤝 Mitra Korporat</td>
+                                                    <td>Bagi hasil pendapatan khusus</td>
+                                                    <td>Sesuai proyek & kapasitas kolaborasi</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <!-- Support Mitra Tab -->
+                                <div class="tab-pane fade" id="div10-addon" role="tabpanel" aria-labelledby="div10-addon-tab">
+                                    <h4 class="mb-3">Add-On & Support Untuk Mitra</h4>
+                                    <div class="table-responsive">
+                                        <table class="service-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Add-On</th>
+                                                    <th>Deskripsi</th>
+                                                    <th>Harga</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>📑 Katalog Pengecer Digital & Media Kit</td>
+                                                    <td>File promo lengkap siap pakai.</td>
+                                                    <td class="price-tag">Rp 150.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>💬 Dasbor Reseller Online</td>
+                                                    <td>Pantau penjualan, pesanan, dan komisi secara real-time.</td>
+                                                    <td class="price-tag">Rp 300.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🎓 Pelatihan Reseller / Orientasi Mitra</td>
+                                                    <td>Pelatihan strategi penjualan digital & branding.</td>
+                                                    <td class="price-tag">Rp 200.000/sesi</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🧠 Akses Template Promosi (Canva / AI Copy)</td>
+                                                    <td>50+ desain template & teks siap diedit.</td>
+                                                    <td class="price-tag">Rp 100.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>⚙️ Pengaturan Sistem Label Putih</td>
+                                                    <td>Branding ulang website + domain reseller kamu sendiri.</td>
+                                                    <td class="price-tag">Rp 500.000 – 1.000.000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <!-- Paket Kemitraan Tab -->
+                                <div class="tab-pane fade" id="div10-paket" role="tabpanel" aria-labelledby="div10-paket-tab">
+                                    <h4 class="mb-3">Komit Kemitraan Lengkap</h4>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">Paket Pemula Afiliasi</div>
+                                                <p>Tautan afiliasi + media kit + laporan bulanan</p>
+                                                <div class="price-tag fs-4">Gratis</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">Paket Premium Reseller</div>
+                                                <p>Diskon 50% + dashboard + pelatihan</p>
+                                                <div class="price-tag fs-4">Rp 750.000</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">Mitra Label Putih</div>
+                                                <p>Lisensi + domain + katalog branding</p>
+                                                <div class="price-tag fs-4">Rp 2.500.000</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="package-card">
+                                                <div class="package-title">🧠 Master Partner (Wilayah)</div>
+                                                <p>Hak eksklusif daerah + sistem CRM + pelatihan</p>
+                                                <div class="price-tag fs-4">Rp 5.000.000 – 10.000.000</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <h5 class="mt-4">Keunggulan Divisi Kemitraan SITUNEO</h5>
+                                    <ul class="feature-list">
+                                        <li><i class="fas fa-check-circle"></i> Komisi tinggi, sistem transparan</li>
+                                        <li><i class="fas fa-check-circle"></i> Bisa branding ulang (white label)</li>
+                                        <li><i class="fas fa-check-circle"></i> Dapat dukungan promosi & pelatihan</li>
+                                        <li><i class="fas fa-check-circle"></i> Integrasi sistem order & dashboard otomatis</li>
+                                        <li><i class="fas fa-check-circle"></i> Potensi pendapatan pasif jangka panjang</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promo Section -->
+    <section class="promo-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="promo-card">
+                        <h2 class="promo-title">🌐 Mulai dari Rp 150.000/bulan – Bisnis Kamu Sudah Online!</h2>
+                        <p class="lead">Domain gratis, hosting, SSL, & dukungan penuh.</p>
+                        <p>💬 Konsultasi Gratis: [nomor WhatsApp kamu di sini]</p>
+                        <a href="#contact" class="contact-btn">Hubungi Kami Sekarang</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="footer-logo">PT SITUNEO DIGITAL</div>
+                    <p>Solusi digital terpadu untuk mengembangkan bisnis Anda di era modern.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="mb-3">Layanan</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Pembuatan Website</a></li>
+                        <li><a href="#">Digital Marketing</a></li>
+                        <li><a href="#">Otomasi & AI</a></li>
+                        <li><a href="#">Branding & Desain</a></li>
+                        <li><a href="#">Konten & Copywriting</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="mb-3">Perusahaan</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Tentang Kami</a></li>
+                        <li><a href="#">Tim</a></li>
+                        <li><a href="#">Karir</a></li>
+                        <li><a href="#">Klien</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="mb-3">Support</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Kontak</a></li>
+                        <li><a href="#">Privasi</a></li>
+                        <li><a href="#">Syarat & Ketentuan</a></li>
+                        <li><a href="#">Bantuan</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="mb-3">Kontak</h5>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Jakarta, Indonesia</li>
+                        <li><i class="fas fa-phone me-2"></i> +62 812-3456-7890</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@situneo.com</li>
+                        <li><i class="fab fa-whatsapp me-2"></i> +62 812-3456-7890</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 PT SITUNEO DIGITAL. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Add active class to nav links on scroll
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            // This would be used if we had a navigation menu that highlights the current section
+        });
+    </script>
+</body>
+</html>
